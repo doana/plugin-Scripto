@@ -357,7 +357,7 @@ class Scripto_IndexController extends Omeka_Controller_AbstractActionController
                         'item_id' => $this->_getParam('item_id'),
                         'file_id' => $this->_getParam('file_id'),
                         'doc' => $doc,
-                        'body' => $body,
+                        'body' => $this->_getParam('wikitext'),
                     ));
                     break;
                 case 'watch':
