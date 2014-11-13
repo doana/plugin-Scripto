@@ -352,7 +352,8 @@ class Scripto_IndexController extends Omeka_Controller_AbstractActionController
 
                     //Call hook to notify of transcription edit.
                     $pluginBroker = get_plugin_broker();
-                    $pluginBroker->callHook("scripto edit", array(
+                    $pluginBroker->callHook("scripto_edit", array(
+                        'action' => $this->_getParam('page_action'),
                         'item_id' => $this->_getParam('item_id'),
                         'file_id' => $this->_getParam('file_id'),
                         'doc' => $doc,
